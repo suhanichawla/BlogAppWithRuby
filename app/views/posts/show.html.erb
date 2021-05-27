@@ -1,9 +1,8 @@
-<p>yo</p>
-<h1><%= @post.title %></h1>
-<div>
-    <%= @post.body %>
+<div class="card" style="width: 25rem;">
+    <div class="card-body">
+        <h2 class="card-title"><%= @post.title %></h2>
+        <p class="card-text"><%= @post.body %></p>
+        <a href="#" class="card-link"><%= link_to "Edit Post", edit_post_path(@post) %></a>
+        <a href="#" class="card-link"><%= link_to "Delete Post", post_path(@post), method: :delete, data: {confirm: "Are you sure?"} %></a>
+    </div>
 </div>
-<br>
-
-<%= link_to "Edit Post", edit_post_path(@post) %>
-<%= link_to "Delete Post", post_path(@post), method: :delete, data: {confirm: "Are you sure?"} %>
