@@ -1,24 +1,18 @@
-# README
+# SETUP
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+```
+cd BlogAppWithRuby
+bundle install
+rails db:migrate
+rails s
+```
+Go to localhost:300 to see the website in action
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+In case you run into the following error:
+```
+Rails: Webpacker::Manifest::MissingEntryError in Home#index
+```
+Run the following command:
+```
+bundle exec rake webpacker:install
+```
